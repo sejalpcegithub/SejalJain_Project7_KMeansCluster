@@ -30,7 +30,7 @@ def predict():
     exp3 = int(request.args.get('exp3'))
     exp4 = int(request.args.get('exp4'))
 
-    prediction = classifier.predict(sc.transform([[exp1,exp2,exp3,exp4]]))
+    prediction = model.predict(sc.transform([[exp1,exp2,exp3,exp4]]))
     
     print("K-means prediction",prediction)
     if prediction==[0]:
