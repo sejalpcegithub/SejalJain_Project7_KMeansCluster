@@ -44,4 +44,5 @@ def predict():
     return render_template('index.html', prediction_text='k-means cluster = {}'.format(prediction))
 
 
-app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
